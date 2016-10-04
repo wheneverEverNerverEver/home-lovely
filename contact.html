@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>contact</title>
+	<link rel="stylesheet" href="css/contacta.css">
+	<link rel="stylesheet" href="css/share.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=68c92db1b95e9f508da8670282763e32"></script>
+	<script src="js/contact.js"></script>
+</head>
+<body>
+	<div class="nav">
+		<form action="get">
+			<input type="text" name="a">
+			<button>搜索</button>
+		</form>
+		<ul>
+			<li><a href="home.html" class="select" data-icon="2">HOME</a></li>
+			<li><a href="products.html" data-icon="U">PRODUCTS</a></li>
+			<li><a href="news.html" data-icon="i">NEWS</a></li>
+			<li class="aseclect"><a href="contact.html" data-icon="o">CONTACT</a></li>
+			<li><a href="other.html" data-icon="@">OTHER</a></li>
+		</ul>
+	</div>
+	<div class="pcontent">
+		<div class="middle" id="load">
+			<span class="choice">登陆</span><span>注册</span>
+			<div id="showMore">
+				<div class="show">
+					<form action="post">
+						<ul>
+							<li>
+								<label for="name">账&nbsp&nbsp号：</label>
+								<input type="text" name="aa" placeholder="用户名/手机号" value="">
+							</li>
+							<li>
+								<label for="code">密  &nbsp&nbsp 码：</label>
+								<input type="password" name="aaa" placeholder="这里输入密码">
+							</li>
+							<li class="center"><button>登陆</button></li>
+						</ul>
+					</form>
+				</div>
+				<div>
+					<form action="post">
+						<ul>
+							<li>
+								<label for="name">用户名：</label>
+								<input type="text" name="aa" placeholder="昵称">
+							</li>
+							<li>
+								<label for="code">密   &nbsp&nbsp码：</label>
+								<input type="password" name="aaa"  placeholder="由字母数字及其他组成">
+							</li>
+							<li>
+								<label for="code">确认密码：</label>
+								<input type="password" name="aaa"  placeholder="再一次输入密码">
+							</li>
+							<li class="center"><button>马上注册</button></li>
+						</ul>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="container"></div>
+		<script type="text/javascript">
+			// <!--按照默认属性创建地图和标记-->
+			var map = new AMap.Map('container');
+		    map.setZoom(15);//设置缩放级别
+		    map.setCenter([116.2695662200,40.1312580041]);//设置中心坐标
+		    var marker = new AMap.Marker({//创建标记
+		        position: [116.2695662200,40.1312580041],//设置标记位置
+		        map:map//设置map属性，使得标记能被立即添加到地图上
+		    });
+			 //marker.setMap();移除点标记
+			// <!--创建并且设置信息窗口-->
+			 AMap.plugin('AMap.AdvancedInfoWindow',function(){
+		       infowindow = new AMap.AdvancedInfoWindow({
+		        content: '<div class="info-title">高德地图</div><div class="info-content">'+'我的位置。<br/>'+'</div>',//设置信息窗口内容
+		        offset: new AMap.Pixel(0, -30)//设置窗口位置相对于标记的偏移量
+		      });
+		      infowindow.open(map,[116.2695662200,40.1312580041]);//创建好信息窗口后，立即调用open方法，让它显示在需要的位置
+			})
+			// 	<!--添加工具条和比例尺子-->
+			AMap.plugin(['AMap.ToolBar','AMap.Scale'],function(){//加载工具条和比例尺两个插件放到数组中
+		        var toolBar = new AMap.ToolBar();//在回调函数里进行控件的生成和添加
+		        var scale = new AMap.Scale();
+		        map.addControl(toolBar);
+		        map.addControl(scale);
+		    })
+			//map.removeControl(toolBar);移除控件
+			</script>
+	</div>
+	<div class="footer">
+		<div>
+			<img src="images/bg1.png" alt="1">
+		</div>
+		<div>
+			<span>早发白帝城  李白</span>
+			<a href="#">朝辞白帝彩云间</a>
+			<a href="#">千里江陵一日还</a>
+			<a href="#">两岸猿声啼不住</a>
+			<a href="#">轻舟已过万重山</a>
+		</div>
+		<div>
+			<span>绝句  杜甫</span>
+			<a href="#">两个黄鹂鸣翠柳</a>
+			<a href="#">一行白露上青天</a>
+			<a href="#">窗含西岭千秋雪</a>
+			<a href="#">门泊东吴万里船</a>
+		</div>
+		<div>
+			<span>离思  元稹</span>
+			<a href="#">曾经沧海难为水</a>
+			<a href="#">除却巫山不是云</a>
+			<a href="#">取次花丛懒回顾</a>
+			<a href="#">半缘修道半缘君</a>
+		</div>
+		<p>
+			关于我们| 联系方式| 八戒动态| 网站地图| 公司资质| 加入我们| 支付方式| 我也要与猪八戒网合作| 热门服务| 友情链接| 猪八戒网移动版<br>
+			Copyright 2005-2016 zbj.com 版权所有 渝ICP备10202274-1号 渝B2-20080005
+		</p>
+	</div>
+</body>
+</html>

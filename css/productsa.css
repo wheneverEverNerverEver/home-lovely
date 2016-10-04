@@ -1,0 +1,56 @@
+body{background: url(../images/pppg.png);}
+.pcontent{margin:0 auto;width: 85%;}
+.pcontent h1{height:30px;line-height: 30px;font-size:20px;color:#fdcfa7;margin-bottom:20px;margin-top: 30px;}
+
+#return{position: fixed;right:-15px;bottom:50px;display: none;}
+/*=========================轮播=========================*/
+.gunMo{width:100%;height:500px;position:relative;border:6px solid rgba(69,166,21,0.2);box-sizing:border-box;overflow: hidden;margin:20px 0;}
+#ul{position: absolute;top:0;left: 0;width:100%;margin:0 auto;z-index: 50;}
+#ul>li{width: 100%;}
+#ul>li>a{display: inline-block;width: 100%;}
+#ul>li>a>img{height:600px;border:none;width: 100%}
+
+.option{position: absolute;top: 50%;right:0;transform:translateY(80%);z-index: 100;display:none;}
+.option>img{display: block;width: 70px;cursor: pointer;}
+.option>img:nth-child(1){transform:rotate(20deg);}
+.option>img:nth-child(2){transform:rotate(-200deg);}
+/*=====================================================*/
+.pcontent{overflow: hidden;}
+.picIs{perspective:2500px;perspective-origin:50% 50%;display: inline-block;width:32%;height:350px;border:3px solid #ccc;position: relative;overflow: hidden;margin-left: 3px;}
+.myPic:hover{transform:rotateY(-90deg);}
+.picIs:hover{border-color:#fdcfa7;}
+.picIs>div.hover{transform:rotateY(0deg)}
+.picIs>div.hover>.myPicOne>img{transform:scale(2);}
+.myPic{position:absolute;transition:transform 0.5s linear;transform-style:preserve-3d;width:300px;height:280px;top:0;left:0;bottom:0;right: 0;margin: auto;background:rgba(0,0,0,0.3);}
+.myPic::before,.myPic::after{
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 100%;height: 100%;
+	background:rgba(0,0,0,0.3);
+	top:0;left:0;
+	transform:rotateY(90deg) translateX(10px);
+}
+.myPic::before{tranform:translateZ(50px);}
+.myPic::after{tranform:translateZ(-50px);}
+.myPic .myPicOne,.myPic .myPicTwo{
+    position: absolute;top:0;left:0;
+    width: 100%;height:100%;border:2px solid #ccc;
+    -webkit-box-shadow: 3px 3px 3px #ccc;  
+    -moz-box-shadow: 3px 3px 3px #ccc;  
+    box-shadow: 3px 3px 3px #ccc;
+}
+.myPic .myPicTwo{transform:rotateY(90deg) translateZ(150px);background: url(../images/pg.png);background-size: 100% 100%;box-sizing:border-box;border:1px solid #ccc;}
+.myPic .myPicOne{transform:translateZ(150px);overflow: hidden;}
+.myPic .myPicOne>img{width:300px;height:280px;}
+.myPic .myPicTwo>span{display: block;width: 100%;height: 50px;}
+.myPic .myPicTwo>span>a{display: inline-block;height:100%;color:#9c9393;}
+.myPic .myPicTwo>span>a:hover{color:#fdcfa7 }
+.myPic .myPicTwo>span:nth-child(1)>a:nth-child(1){font-size: 20px;width:50%;color: #000;text-align: center;}
+.myPic .myPicTwo>span:nth-child(1){box-sizing:border-box;padding-top:20px;}
+.myPic .myPicTwo>p{display: block;width: 100%;height:180px;box-sizing:border-box;padding: 20px;font-size: 15px;line-height: 25px;color:#4d4a4a;}
+.myPic .myPicTwo>span:nth-child(3)>a{font-size:18px;float: right;margin-right:20px;}
+.myPic .myPicTwo>span:nth-child(3)>a:nth-child(1){float:left;color:#faa8a8;background: url(../images/bg21.png);background-size: 100% 100%;width: 50px;line-height: 35px;text-align: center;}
+.myPic .myPicTwo>span:nth-child(3)>a:nth-child(1):hover{color:#4ea921;}
+.footer{min-width: 1024px;}
+
