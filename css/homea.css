@@ -164,7 +164,7 @@ body{}
 	.top-banner .top form{display: none;}
 	.pcontent{width:100%}
 	.top-banner .banner .middle ul{width:100%;}
-	.top .banner{background-size:100% auto;}
+	.top-banner .top .banner{background-size:100% auto;}
 }
 @media screen and (max-width:700px){
 	.top-banner,.footer {width: 700px;}
