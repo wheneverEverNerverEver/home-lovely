@@ -1,6 +1,5 @@
-html{font-size: 10px;}
+html{font-size: 12px;}
 .top-banner{width: 100%;height:100%;position:relative;overflow: hidden;}
-body{}
 
 /*============================top-banner======================*/
 /*--------------------------------top-----------------------------*/
@@ -81,7 +80,7 @@ body{}
 .top-banner .banner .middle ul li a.select{background: white;color:#4ca81e;}
 .top-banner .banner .middle ul li a:hover{background:#399c07;}
 /*=============================content===============================*/
-.content{width: 100%;background: url(../images/background.png);position: relative;min-width: 700px;}
+.content{width: 100%;background: url(../images/background.png);position: relative;}
 .content>div{
 	background: rgba(255,255,255,0.95);height: 100%;
 	box-shadow:-10px 0 10px #ccc, /*左边阴影*/  
@@ -96,12 +95,12 @@ body{}
 }
 
 /*------------------------------contentInner----------------------------*/
-.content .middle .contentInner{width: 100%;padding-top:3em;;}
+.content .middle .contentInner{width: 100%;padding-top:3em;}
 .content .middle .contentInner .show{width:60%;height:30em;margin-left:1em;display: inline-block;border-radius: 0.3em;overflow: hidden;border:0.2em solid #b7eda6;}
 .content .middle .contentInner>.p,.content .middle .contentInner>.show{vertical-align: middle;}
 .content .middle .contentInner .show img{width: 100%;height:100%}
 .content .middle .contentInner>.p{float:right;width:35%;border:0.2em solid #dbdbda;margin-right:1em ;box-sizing:border-box;padding:1em;color: #75736f;border-radius: 0.5em;height:30em;overflow: hidden;}
-.content .middle .contentInner>.p>p{width: 100%;height: 100%;font:1.5em/1.6em "微软雅黑";text-indent: 2em;position: relative;}
+.content .middle .contentInner>.p>p{width: 100%;height: 100%;font:1.5em/1.6em "微软雅黑";text-indent:2em;position: relative;}
 .content .middle .contentInner>.p>p>span:nth-child(1){display:block;width: 100%;text-align: center;font: 1.7em/2em "微软雅黑";color:#736a5c;}
 .content .middle .contentInner>.p>p>span:nth-child(2){position: absolute;display: inline-block;top:-2em;left:-1em;width:6em;z-index:-1;}
 .content .middle .contentInner>.p>p>span:nth-child(2)>img{width: 100%;}
@@ -129,9 +128,9 @@ body{}
 .content .middle .contentMid-right ul>li>a:hover{background:#b7eda6;transform:scale(1.3) translateX(2em);color: white}
 .content .middle .contentMid-right ul>li>a.change{color:#71b150;font:1.6em/1.8em "微软雅黑";}
 /*============================换肤的显示======================*/
-#ss{position: fixed;top:0;left: 0;right:0;bottom: 0;background:rgba(255,255,255,0.7);display: none;z-index: 100}
+#ss{position: fixed;top:0;left: 0;width:100%;height:100%;background:rgba(255,255,255,0.7);display: none;z-index:100}
 #ss>div{position:absolute;top:0;left: 0;right:0;bottom: 0;width:60em;height:20em;margin: auto;}
-#ss>div>a{display: inline-block;width:18em;height:18em; margin-left:1.5em;position: relative;border-radius: 1em;}
+#ss>div>a{display: inline-block;width:10em;height:10em; margin-left:1em;position: relative;border-radius: 10%;}
 #ss>div>a:nth-child(1){background: green }
 #ss>div>a:nth-child(2){background:purple }
 #ss>div>a:nth-child(3){background: red}
@@ -142,38 +141,50 @@ body{}
 	top:0;left: 0;right:0;bottom: 0;
 	background: rgba(255,255,255,0.7);
 	text-align: center;
-	font: 3em/5em "微软雅黑";
+	font: 2em/5em "微软雅黑";
 	display: block;
 }
-#ss>div>button{float: right;color:#333;background: white;display: block;padding: 1em 3em;font-weight: bold;font-size:1.6em;border-radius:20%; }
+#ss>div>button{color:#333;background: white;display: block;padding: 1em 3em;font-weight: bold;font-size:1.6em;border-radius:20%; }
 /*====================响应式==========================*/
-
+.footer{width: 100%;
+	background: linear-gradient(to bottom,#71b150 0%,#425040 100%);
+}
+.footer>.div{display:inline-block;width: 24.5%;vertical-align: middle;}
+.footer>.div:nth-child(1){text-align: center;}
+.footer>.div>img{width: 90%;height: 100%;}
+.footer>.div>a,.footer>.div>span{display: block;width: 100%;text-indent: 3em}
+.footer>.div>a{font:1.3em/1.8em "微软雅黑";color:#ccc;display: block;}
+.footer>.div>a:hover{color:#d7cebd}
+.footer>.div>span{font:1.5em/2em "微软雅黑";color: #d7cebd}
+.footer>p{text-align: center;padding-bottom: 3em;font-size: 14px;}
 @media screen and (max-width:1150px){
 	.top-banner .top .middle>div>a{display: none;}
 	.top-banner .top .middle{height:0.4em;overflow: hidden;}
-	.top-banner .top .banner{background-size:100% auto;}
+	.top-banner .banner .middle ul{width: 100%;}
+	.top-banner .banner{background-size: 100% auto;}
 }
 @media screen and (max-width:950px){
 	.content .middle .contentInner>.p,.content .middle .contentInner>.show{margin-left: 0;width: 100%;}
+	.content .middle .contentInner{padding-top:0.2em}
+	.content .middle .contentMid,.content .middle .contentInner{width: 100%}
 	.top-banner .top .middle>span,.top-banner .top .middle>a{display:none;}
 	.middle{width:100%}
-	.footer>div{width:100%}
+	.content{width: 100%;}
+	.footer>.div{width:100%;border-bottom:0.1em dotted #ccc;text-align: center;}
+	.footer>.div>a,.footer>.div>span{text-indent: 0;}
 	.top-banner .top .middle>div>span{display: none;}
-	.content .middle .contentMid-left,.content .middle .contentMid-right{width:100%;margin-left: 0}
-	.content .middle .contentMid-right ul{margin: 0 auto;width:60%;}
+	.content .middle .contentMid-left,.content .middle .contentMid-right{width:100%;margin-left: 0;}
+	.top-banner .banner{background-origin:center;background-size: auto auto}
+	#cc{text-align: center;background:rgba(69,166,21,0.5)}
+	.top-banner .banner .middle ul li{width: 100%}
+	.content .middle>div:nth-child(2)>.p{margin-left: 0}
+	.content .middle .contentMid{margin-top: 0.1em;margin-bottom: 0.2em;}
+	.content{margin-bottom: 0.2em;}
+	.content .middle .contentMid-right ul{margin: 0 auto;width:90%;}
 	.content .middle .contentMid-right ul li{text-align: center;}
+	.content .middle .contentMid-right ul li:nth-child(1){text-align: left;}
 	.content .middle .contentInner>.p{margin-right:0;}
 	.top-banner .top form{display: none;}
 	.pcontent{width:100%}
-	.top-banner .banner .middle ul{width:100%;}
-	
 }
-/* @media screen and (max-width:700px){
-	.top-banner,.footer {width: 700px;}
-	.middle,.content .middle .contentInner,.top-banner .banner{width:100%;}
-	.top-banner .banner>div{width: 90%;}
-	.content .middle .contentInner>.p,.content .middle .contentInner>.show{margin-left: 0;width:100%;}
-	.content .middle .contentMid-left,.content .middle .contentMid-right{width:100%;margin-left: 0}
-	.content .middle .contentMid-right ul{margin: 0 auto;width:60%;}
-	.content .middle .contentMid-right ul li{text-align: center;}
-} */
+
