@@ -163,9 +163,11 @@ body{}
 	.content .middle .contentInner>.p{margin-right:0;}
 	.top-banner .top form{display: none;}
 	.pcontent{width:100%}
+	.top-banner .banner .middle ul{width:100%;}
+	.top .banner{background-size:100% auto;}
 }
 @media screen and (max-width:700px){
-	.top-banner {width: 700px;}
+	.top-banner,.footer {width: 700px;}
 	.middle,.content .middle .contentInner,.top-banner .banner{width:100%;}
 	.top-banner .banner>div{width: 90%;}
 	.content .middle .contentInner>.p,.content .middle .contentInner>.show{margin-left: 0;width:100%;}
