@@ -1,0 +1,101 @@
+/*body{background: url(../other/bgcolor.jpg);}*/
+.pcontent{width: 97%;overflow: hidden;margin:0 auto;}
+/*==========图片效果==========*/
+#fan{width:100%;
+	position: relative;
+	height: 260px;
+	background-size:100% 100%;
+	overflow: hidden;
+	margin: 5px 0 -3px 0;
+	border-bottom:8px solid #e8e8e8;
+	animation-duration:2s;
+}
+#fan>span{position: absolute;top:50%;transform:translateY(-50%);font-size: 40px;color:white;text-align: center;background:rgba(255,255,255,0.6);z-index: 100;padding:0 10px;cursor: pointer;display: inline-block;width: 40px;height: 60px;}
+#fan #right{right:-15px;border-radius: 50% 5px 5px 50%;}
+#fan #left{border-radius: 5px 50% 50% 5px;left:-15px;  }
+.fanZZ{width: 100%;height: 100%;position: absolute;top:0;left:0;background-size:100% 100%;}
+.mm{background:url(../images/p3.jpg) no-repeat;}
+.fanZZ,#fan{
+	animation-timing-function:linear;
+	animation-duration:3s;
+	animation-fill-mode:forwards;
+	background-repeat:no-repeat 0 0;
+}
+@keyframes fanL{
+	from{background-position:0 0;}
+	to{background-position:-1000% 0;}
+}
+@keyframes fanR{
+	from{background-position:0 0;}
+	to{background-position:1000% 0;}
+}
+@keyframes cont{
+	from{background-size:100% 100%;}
+	50%{background-size:200% 200%;}
+	to{background-size:100% 100%;}
+}
+/*=============菜单=============*/
+.menu{padding:10px;width:20%;float:left;border:1px solid #e8e8e8;border-radius:5px;background: url(../images/bg3.png) no-repeat right bottom;margin-left: 10px}
+.menu h1{font:20px/45px "微软雅黑";color:#4d8436;font-weight:bold;cursor: pointer;border-radius: 5px;}
+.menu h1:hover{color: white;}
+.menu li{width: 100%;margin-top:10px;border:1px solid transparent;border-radius:3px;}
+.menu li span{display: block;width: 100%;font:18px/35px "微软雅黑";color:#4d8436;}
+.menu li a{font:16px/20px "微软雅黑";margin-left: 20px;display: inline-block;width: 70px;color:#718469;padding:5px 5px;text-align: center;border-radius: 3px;}
+.menu li a:hover{color: white;transform:scale(1.3);background:#eeb181 }
+.menu li img{transform:rotate(0deg);transition:all 3s ;}
+.menu li:hover img{transform:rotate(360deg);transition:all 1s;}
+/*===================展示=============*/
+.allThing{float: right;width: 75%;margin-right:10px;border:1px solid #e8e8e8;border-radius:3px;padding-top: 20px;padding-bottom:30px;}
+.allThing>div{
+	width:30%;height:285px;
+	display: inline-block;
+	position: relative;
+	border:1px solid #e8e8e8;
+	font-size: 0;border-radius: 5px;
+	overflow: hidden;
+	-webkit-box-shadow: 3px 3px 3px #e8e8e8;  
+  	-moz-box-shadow: 3px 3px 3px #e8e8e8;  
+  	box-shadow: 3px 3px 3px #e8e8e8;  
+  	margin:5px 10px;
+}
+/*.allThing>div:nth-child(3n+1){margin-left:17px}*/
+.allThing>div>a:nth-child(2),.menu h1:hover{
+	background: linear-gradient(to bottom,#cbdcc0 0,#85bd67 50%,#cbdcc0 100%);color: white;margin-top:3px;
+	background: -moz-linear-gradient(bottom,#cbdcc0 0,#85bd67 50%,#cbdcc0 100%);
+   background: linear-gradient(to bottom,#cbdcc0 0,#85bd67 50%,#cbdcc0 100%);
+   background: linear-gradient(to bottom,#cbdcc0 0,#85bd67 50%,#cbdcc0 100%);
+}
+.allThing>div>a{width: 100%;display: inline-block;}
+.allThing>div>a:nth-child(1){height: 250px;position: relative;overflow: hidden;}
+.allThing>div>a:nth-child(2){
+	height: 30px;font:16px/30px "微软雅黑";
+	text-align: center;border-radius:5px;
+	
+}
+.allThing>div>span{display:inline-block;width:100%;position: absolute;left: 0;z-index: 100;background: rgba(255,255,255,0.9);overflow: hidden;height:70px;display: none;top:0;}
+.allThing>div>a:nth-child(1):hover>img{transform:scale(1.5);}
+@keyframes spanss{
+	from{top:0;}
+	to{top:90%;}
+}
+.allThing>div>a:nth-child(2):hover{
+	background: linear-gradient(to bottom,#85bd67 0,#cbdcc0 50%,#85bd67 100%);color: white;margin-top:3px;
+	background: -moz-linear-gradient(bottom,#85bd67 0,#cbdcc0 50%,#85bd67 100%);
+   background: linear-gradient(to bottom,#85bd67 0,#cbdcc0 50%,#85bd67 100%);
+   background: linear-gradient(to bottom,#85bd67 0,#cbdcc0 50%,#85bd67 100%);
+}
+.allThing>div:hover>span{
+	-webkit-animation: spans 2s ;
+	-o-animation: spans 2s ;
+	animation: spans 2s ;
+	display: block;
+}
+@keyframes spans{
+	from{top:80%;height:0;}
+	to{top:0;height: 80%;}
+}
+.allThing>div>span>a{display:block;width: 100%;text-align: center;
+	height:30px;background:#cbdcc0;color:white;font-size: 20px}
+.allThing>div>span>a:hover{background: #a5cd8f;transform:scale(1.5);}
+.allThing>div>a>img{width: 100%;height: 100%;display: block;}
+.footer{min-width: 1024px;}

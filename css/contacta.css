@@ -1,0 +1,56 @@
+.pcontent{height: 2500px;}
+/*=======================地图===============================*/
+.map{width: 100%;height:600px;}
+#container{
+	height:500px;width:100%;
+	border-top:3px solid #e8e8e8;
+	box-shadow: 0 -10px 10px #ccc;
+	-webkit-box-shadow: 0 -10px 10px #ccc;
+	-moz-box-shadow: 0 -10px 10px #ccc;
+}
+.info-title {
+	background-color: rgba(0, 155, 255, 0.8);
+	color: white;
+	font-size: 14px;
+	font-weight: lighter;
+	letter-spacing: 1px;
+	line-height: 26px;
+	padding: 0 0 0 6px;
+}
+.info-content {
+	color: #666666;
+	line-height: 23px;
+	padding: 4px;
+}
+/*===============================注册和登陆部分=============*/
+.pcontent{width:100%;position: relative;height: 1000px;}
+.pcontent .a{position:absolute;top:0;left:50%;transform:ranslateX(-50%) rotate(90deg);font-size: 200px;z-index: 50;color: #abcc98;}
+#load{padding-top: 30px;height:500px;}
+#load>span{width:150px;display: inline-block;font-size:30px;border-radius:2px;text-align: center;color:#abcc98;margin-left:20px;border-radius:10px 10px 0 0;padding:5px 0;border:2px solid #abcc98; border-bottom: none;cursor: pointer;position: relative;}
+#load>span.choice{background:#abcc98;color:white;border:none;}
+#load>span:nth-child(1){margin-left:200px;}
+#showMore{position: relative;height: 100%;}
+#showMore>img{position: absolute;top:35%;right:0;z-index:100 ;width: 30%}
+#showMore>div{position:absolute;top:0;left:0;right:0;bottom: 0;margin:auto;display: none;width: 80%;}
+#showMore>div.show{display: block;}
+#showMore>div form{width:100%;padding-top:40px;border:3px solid #abcc98;border-radius: 5px;background:url(../images/bg21.png) no-repeat right bottom;}
+#showMore>div form ul{width:100%;}
+#showMore>div form ul li {margin-top:10px;padding:20px 0;}
+#showMore>div form ul li label,#showMore div form ul li input{display: inline-block;font-size:21px;color:#303030;}
+#showMore>div form ul li input{width:40%;}
+#showMore>div form ul li label{width:20%;text-align: right;color:#abcc98;margin-left: 70px; }
+#showMore>div form ul li button{
+	font-size:20px;color:#f2f3f4;
+	padding: 10px 50px;background:#abcc98;
+	font-weight: bold;border-radius: 10px;
+	box-shadow:2px 0 2px #ccc,  
+    			0 2px 2px #ccc;
+    -webkit-box-shadow:2px 0 2px #ccc,  
+    			0 2px 2px #ccc;
+    -moz-box-shadow:2px 0 2px #ccc, 
+    			0 2px 2px #ccc;
+    			cursor: pointer;
+	 }
+#showMore>div form ul li.center{text-align: center;margin-top:20px;}
+.footer{min-width: 1024px;}
+

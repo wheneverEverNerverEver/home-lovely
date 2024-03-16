@@ -1,0 +1,96 @@
+.pcontent{
+	background:#fffdfd;min-width:1024px;
+	box-shadow:-10px 0 10px #ccc, /*左边阴影*/  
+    			10px 0 10px #ccc, /*右边阴影*/  
+    			0 10px 10px #ccc; /*底边阴影*/ /*0 -10px 10px blue, /*顶部阴影*/ 
+    -webkit-box-shadow:-10px 0 10px #ccc, /*左边阴影*/  
+    			10px 0 10px #ccc, /*右边阴影*/  
+    			0 10px 10px #ccc; /*底边阴影*/ 
+    -moz-box-shadow:-10px 0 10px #ccc, /*左边阴影*/  
+    			10px 0 10px #ccc, /*右边阴影*/  
+    			0 10px 10px #ccc; /*底边阴影*/
+}
+/*==============================页脚============================*/
+.footer{width: 100%;
+	background: linear-gradient(to bottom,#71b150 0%,#425040 100%);
+}
+.footer>div{display: inline-block;width: 24.5%;vertical-align: middle;}
+.footer>div:nth-child(1){text-align: center;}
+.footer>div>img{width: 90%;height: 100%;}
+.footer>div>a,.footer>div>span{display: block;width: 100%;text-indent: 3em}
+.footer>div>a{font:1.3em/1.8em "微软雅黑";color:#ccc}
+.footer>div>a:hover{color:#d7cebd}
+.footer>div>span{font:1.5em/2em "微软雅黑";color: #d7cebd}
+.footer>p{text-align: center;padding-bottom: 3em;font-size: 14px;}
+/*================================================================*/
+html,body{width: 100%;}
+.middle{width:85%;margin:0 auto;}
+/*========================================导航条================================*/
+@font-face{
+	font-family:"R";
+	src:url('../fonts/raphaelicons-webfont.eot') format('eot'),
+		url('../fonts/raphaelicons-webfont.ttf') format('ttf'),
+		url('../fonts/raphaelicons-webfont.svg') format('svvg'),
+		url('../fonts/raphaelicons-webfont.woff') format('woff');
+
+}
+.nav{
+	width: 100%;overflow: hidden;min-width: 1024px;
+	background: linear-gradient(to bottom,#517446 0%,#4ea921 30%,rgba(69,166,21,0.5) 100%);
+	background: -ms-linear-gradient(bottom,#517446 0%,#4ea921 30%,rgba(69,166,21,0.5) 100%);
+	background: -moz-linear-gradient(bottom,#517446 0%,#4ea921 30%,rgba(69,166,21,0.5) 100%);
+	background: linear-gradient(to bottom,#517446 0%,#4ea921 30%,rgba(69,166,21,0.5) 100%);
+	background: linear-gradient(to bottom,#517446 0%,#4ea921 30%,rgba(69,166,21,0.5) 100%);
+}
+.nav form{display: block;text-align: center;height:100px;box-sizing:border-box;padding-top:24px;width:85%;margin:20px auto;background: url(../images/top.png) no-repeat 20% 0;background-size:  90% 100%;}
+.nav form input,.nav form button{display: inline-block;font-size:2em;border-radius:5px;}
+.nav form input{width:55%;}
+.nav form button{color:rgba(69,166,21,0.9);background:#fff;padding:0 1em ;border:3px solid rgba(69,166,21,0.3); }
+.nav ul{width: 90%;height:80px;background:rgba(255,255,255,0.2);margin:0 auto;border-radius: 5px 5px 0 0;overflow: hidden;}
+.nav ul li{float: left;width: 20%;height:100%;text-align: center;position: relative;}
+.nav ul li a{width: 100%;height: 100%;display: inline-block;position: relative;color: white;font-size:25px;text-align: center;line-height:95px;}
+.nav ul li.aseclect{background:#fdcfa7 ;color:white;border-radius:5px;}
+.nav ul li a::before{
+	content: attr(data-icon);
+	position: absolute;
+	top:30%;left: 50%;
+	color:white;
+	width: 10%;
+	transform:translate(-50%,-50%);
+	font-size: 30px;
+	font-family: "R";
+
+}
+.nav ul li:hover{background:rgba(255,255,255,0.7);}
+.nav ul li:hover:before,.nav ul li:hover:after{
+	content: "";
+	display:inline-block;
+	transition:3s all;
+	position: absolute;
+
+}
+.nav ul li:hover:before{
+	border-bottom: 4px solid rgba(69,166,21,0.9);
+	animation-name:before;
+	animation-duration:1s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+}
+@keyframe before{
+	from{top:10%;left:-10%;width:10%;}
+	to%{top:10%;left:100%;width:80%}
+}
+.nav ul li:hover:after{
+	border-left: 4px solid rgba(69,166,21,0.9);
+	animation-name:after;
+	animation-duration:1s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+}
+@keyframe after{
+	from{top:100%;right:20%;height: 10%;}
+	to%{top:-10%;right:20%;height:80%;}
+}
+.nav ul li a:hover{color:rgba(69,166,21,0.9) }
+.nav ul li a:hover:before{color:rgba(69,166,21,0.9)}
+

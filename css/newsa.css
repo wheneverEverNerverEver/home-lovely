@@ -1,0 +1,157 @@
+body{background: url(../images/ng.gif);}
+.pcontent{overflow: hidden;}
+/*=================pcontent==================*/
+
+.cont>div{height:200px;padding-top: 10px;box-sizing:border-box;border-radius: 5px;background: rgba(244,215,172,0.1);border-radius:4px;border:1px solid #bfbcb8;margin:15px 0px;width:100%;overflow: hidden;}
+.cont>div:hover{background:rgba(248,214,233,0.2) }
+.cont>div>img{float:left;width:35%;margin-left:10px;height:180px;border-radius: 5px;}
+.cont>div>div{margin-right:10px;float: right ;width: 62%;height: 100%;}
+.cont>div>div,.cont>div>img{vertical-align: middle;}
+.cont>div>div>h3,.cont>div>div>p{display:block;;float: right;}
+.cont>div>div>h3{font:20px/25px "微软雅黑";color:#4d453e;text-align:left;margin-bottom: 10px;background: rgba(69,166,21,0.2);border-radius:4px;width: 100%;height: 25px;text-indent: 1em;}
+.cont>div>div>p{font:15px/23px "微软雅黑";color:#766d65;text-indent: 2em;height: 140px;width:100%;overflow: hidden;}
+.cont>div>div>h3:hover{color: #fdcfa7;background: white;}
+.cont div div h3:hover .span{color: #fccae5}
+.cont div div h3 .span{color:white;float: right;font-size:20px;margin-right: 10px;background:url(../images/nn.png) no-repeat center center;width: 200px;height:25px;cursor:pointer;font:12px/23px "微软雅黑";}
+.cont>div.more{height:535px;}
+.cont>div.less{transition: height 0.5s;}
+.cont>div.more{transition: height 3s;}
+.cont>div.more>img{
+	margin-top:10px;float:right;
+	-webkit-animation: imgs 2s linear;
+	-o-animation: imgs 2s linear;
+	animation: imgs 2s linear;
+	width:97%;height:350px;clear:left;
+	margin-right: 10px;
+}
+@keyframes imgs{
+	from{width:35%;height:100px;}
+	30%{width:40%;height:150px;}
+	60%{width:50%;height:250px;}
+	to{width:97%;height:350px;}
+}
+@keyframes divs{
+	from{width:60%;}
+	to{width:97%;}
+}
+.cont>div.more>div{
+	float: left;margin-right: 0;
+	-webkit-animation: divs 0.5s linear;
+	-o-animation: divs 0.5s linear;
+	animation: divs 0.5s linear;
+}
+.cont>div.more>div{width:100%;}
+.cont>div.more>div>h3{margin-top: 10px}
+/*==========================data==========================*/
+.data{width:100%;border-radius: 10px 10px 0 10px;background:rgba(69,166,21,0.4);margin-top:10px;padding-bottom: 40px}
+.data h2{
+	color:#8cc66f;width: 100%;
+	-webkit-animation: h1a 15s infinite;
+	-o-animation: h1a 15s infinite;
+	animation: h1a 15s infinite;
+	font-size: 20px;
+	text-align: right;
+	margin-bottom: 3px;
+	text-shadow:#fccae5 1px 0 0,#fccae5 0 1px 0,#fccae5 -1px 0 0,#fccae5 0 -1px 0;
+	-webkit-text-shadow:#fccae5 1px 0 0,#fccae5 0 1px 0,#fccae5 -1px 0 0,#fccae5 0 -1px 0;
+	-moz-text-shadow:#fccae5 1px 0 0,#fccae5 0 1px 0,#fccae5 -1px 0 0,#fccae5 0 -1px 0;
+}
+@keyframes h1a{
+	from{width: 100%;}
+	90%{width:80%};
+	80%{width:60%};
+	70%{width: 40%;}
+	60%{width:20%}
+	50%{width:20%};
+	40%{width:20%};
+	30%{width: 40%;}
+	20%{width:60%}
+	10%{width:80%}
+	to{width: 100%;}
+}
+.data h2 a{display: inline-block;width: 40px;height: 40px;background: url(../images/nng4.png) no-repeat center bottom;}
+.data ul{width: 100%;height:250px;}
+.data ul li{
+	width:24.7%;height:100%;font-size: 0;
+	background: rgba(69,166,21,0.2);
+	border-radius: 5px;position: relative;
+	float:left;border-right:4px solid #fccae5;
+	box-sizing:border-box;overflow: hidden;
+	box-shadow:0 10px 10px #ccc;
+ 	-webkit-box-shadow:0 10px 10px #ccc;
+	-moz-box-shadow:0 10px 10px #ccc;
+}
+.data ul li:nth-child(4){border-right: none;}
+.data ul li:hover>img{z-index: 100;transform:scale(1.2);}
+.data ul li img{width:100%;height: 100%;}
+.data ul li::before{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height:50%;
+	border-radius: 0 0 150px 150px;
+	bottom:0;
+	display: inline-block;
+	background-size: 100% 100%-170px;
+}
+.data ul li:nth-child(1){margin-left: 4px;}
+
+.cont{padding-top:15px;width:76%;float: left;}
+.data1{width:22%;float: right;background:rgba(69,166,21,0.4);padding-top: 30px;padding-right: 10px;padding-left: 10px;padding-bottom: 10px;border-radius:0 0 10px 10px}
+.data1 h2{font-size: 18px;line-height: 30px;color:;}
+.data1 h2 a{
+	display: inline-block;
+	width:30px;height:30px;
+	background:url(../images/nng1.png);
+	background-size: 100% 100%;
+	-webkit-animation: rr 4s infinite;
+	-o-animation: rr 4s infinite;
+	animation: rr 4s infinite;
+}
+@keyframes rr{
+	from{transform:rotate(0deg);}
+	50%{transform:rotate(180deg);}
+	to{transform:rotate(360deg);}
+}
+.data1 ul{width: 100%;}
+.data1 ul li{width:100%;height:200px;
+	cursor: pointer;position: relative;
+	overflow: hidden;border-radius:5px;
+	border-top:4px solid #fccae5;
+	/*box-shadow:-10px 0 10px #ccc,10px 0 10px #ccc;
+	-webkit-box-shadow:-10px 0 10px #ccc,10px 0 10px #ccc;
+	-moz-box-shadow:-10px 0 10px #ccc,10px 0 10px #ccc;*/
+}
+.data1 ul li::before{
+	position: absolute;
+	top:0;left: 0;display: inline-block;
+	width: 100%;height:100%;
+	background: rgba(255,255,225,1);
+	z-index: 100;
+}
+.data1 ul li>img{width: 100%;height: 100%;}
+.data1 ul li a.move{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	background: rgba(255,255,255,0.5);
+	z-index: 10;
+	font-size:15px;
+	color:#fdcfa7;
+	text-align: center;
+	overflow: hidden;
+	-webkit-animation: move1 1s ;
+	-o-animation: move1 1s ;
+	animation: move1 1s ;
+	display: none;
+}
+.data1 ul>li:hover>a.move{
+	display: block;
+}
+.data1 ul>li:hover::before{display: none;}
+.data1 ul>li:hover>img{transform:scale(1.6);opacity: 1}
+@keyframes move1{
+	from{height:0;top:100%;}
+	to{height:100% ;top:0;}
+}
+.footer{min-width: 1024px;}
